@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الصف والتواصل - المنصة التعليمية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i> منصتي التعليمية
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fa-solid fa-chart-pie"></i> الرئيسية</a></li>
+                <li><a href="lessons.html"><i class="fa-solid fa-book-open"></i> الدروس</a></li>
+                <li><a href="quizzes.html"><i class="fa-solid fa-pen-to-square"></i> الاختبارات</a></li>
+                <li><a href="classroom.html" class="active"><i class="fa-solid fa-users"></i> التواصل والإدارة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="dashboard-grid">
+            <!-- نموذج التواصل مع أولياء الأمور -->
+            <div class="card">
+                <h2 class="card-title"><i class="fa-solid fa-paper-plane"></i> إرسال ملاحظة لولي الأمر</h2>
+                <form id="parentForm">
+                    <div class="form-group">
+                        <label for="studentSelect">اختر الطالب/الطالبة</label>
+                        <select id="studentSelect" required>
+                            <option value="">جاري تحميل القائمة...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messageType">نوع الملاحظة</label>
+                        <select id="messageType" required>
+                            <option value="تقدير">إشادة وتفوق 🌟</option>
+                            <option value="متابعة">متابعة أكاديمية 📚</option>
+                            <option value="تنبيه">تنبيه سلوك/غياب ⚠️</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messageText">نص الرسالة</label>
+                        <textarea id="messageText" rows="4" placeholder="اكتب الملاحظة هنا ليتم حفظها وإرسالها..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">حفظ وإرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
